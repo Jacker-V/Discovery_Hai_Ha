@@ -1,0 +1,74 @@
+3. TRÒ CHƠI DUY NHẤT: Ô CHỮ "GIẢI MÃ HẢI HÀ" (8h05 – 8h40, 35 phút)
+Ý tưởng: một ô chữ duy nhất chạy xuyên suốt phần giao lưu 35 phút. Có 11 hàng ngang , mỗi hàng có 1 chữ khóa. Ghép 11 chữ cái lại sẽ ra từ khóa hàng dọc bao gồm 3 từ, nói về thông điệp của LTT XXVIII. 
+Việc thực hiện trò chơi này cũng cần đảm bảo không gian mát mẻ, có máy chiếu là loa mic ổn định
+Thể thức: 4 đội theo 4 quận (Cầu Giấy, Hoàng Mai, Thanh Xuân, Đống Đa) có bảng và bút(Thay đổi tùy theo không gian). Cần 1 - 2 MC, 1 người chấm điểm, 1 người điều khiển slide. 
+Vật dụng: giải mã ô chữ (ô trống hiện), Slide, bảng, phấn, giẻ, quà cho các đội còn lại. Có thể thiết kế thêm chuông để các đội bấm
+Nguồn nội dung: Lịch sử hình thành nhóm, "Tổng quát 1 năm Hải Hà", "Ý nghĩa câu chủ đề LTT XXVIII".
+3.1 Phương án ngang 11 hàng (viết không dấu)
+#
+Chữ
+Đáp án
+Câu hỏi
+Nguồn file
+1
+N
+HOANGMAI (8)
+Năm 2005–2006, nhóm chia thành hai quận đầu tiên là Cầu Giấy và quận nào?
+Lịch sử hình thành nhóm 
+2
+G
+GIANGVO (7)
+Cuộc thi Tiếng Hát Ca lần thứ I (thời anh Đỗ Công Sơn, 2010–2012) diễn ra tại địa điểm nào?
+Lịch sử hình thành nhóm 
+3
+O
+VUOTQUA (7)
+Lễ Truyền Thống không chỉ là một cột kỷ niệm mà còn là một cuộc “…” nỗi sợ (hai từ).
+"Ý nghĩa câu chủ đề LTT XXVIII".
+4
+N
+TANSINH VIEN (11)
+Mỗi tháng 9, nhóm tổ chức Thánh lễ đón những bạn nào và khai giảng năm học mới?
+"Tổng quát 1 năm Hải Hà" 
+5
+H
+HAIPHONG (8)
+Tên "Hải Hà" ghép từ miền Hà Tây và giáo phận nào?
+Lịch sử hình thành nhóm 
+6
+A
+ANPHAOMEGA (10)
+Trong logo của nhóm, hai chữ cái Hy Lạp nào đặt trên nền cuốn Kinh Thánh, biểu tượng cho Hải Hà sinh ra trong Lời Chúa và được Lời Chúa dẫn từ đầu đến cuối?
+Lịch sử hình thành nhóm 
+7
+I
+SOICHIDO (8)
+Sự hiện diện của Chúa trong nhóm không chỉ là điểm tựa tâm linh, mà còn là … thắt chặt tình anh em.(3 TỪ)
+"Ý nghĩa câu chủ đề LTT XXVIII".
+8
+D
+DONGTEN (7)
+Từ 17/6/2012 nhóm theo đường hướng và linh đạo của dòng nào?
+Lịch sử hình thành nhóm 
+9
+MỘT
+LUONG HAIHA (10)
+Tên Hải Hà còn mũi tình yêu thương bao dung và “…” của Thiên Chúa (ba từ).
+Lịch sử hình thành nhóm 
+10
+N
+DAN THAN (7)
+Lời mời của LTT XXVIII là: "Đừng sợ …, đừng sợ thương và chia sẻ, đừng sợ làm chứng cho Chúa." Hai từ còn thiếu gì?
+"Ý nghĩa câu chủ đề LTT XXVIII".
+11
+G
+THANHGIA (8)
+Những thánh thánh nào của nhóm có bản đầu làm quà tặng năm 2005, thất lạc rồi được tìm lại, còn bản gỗ hiện tại được chuyển giữa các loại (hai từ)?
+Lịch sử hình thành nhóm 
+Từ khóa hàng dọc (11 chữ): N–G–O–N–H–A–I–D–A–N–G = NGỌN HẢI ĐĂNG .
+Câu hỏi từ khóa : "Theo ý nghĩa câu chủ đề LTT XXVIII, Lời Chúa 'Đừng sợ' là lời an ủi dịu dàng, một điểm tựa vững chắc và là …dẫn đường cho chúng ta ."
+Phương án trước: từ khóa không chứa cụm "Đừng sợ" hay "Ta ở với người", các chữ khóa không hiện theo thứ tự, và đội phải đọc kỹ năng ý nghĩa chủ đề mới mong ra. Từ khóa cũng chơi chữ với tên "Hải Hà".
+3.2 Luật chơi
+Mỗi hàng ngang: MC đọc câu hỏi, Đội trả lời trong 15 giây . Đúng +10 điểm ; sai hoặc không trả lời thì không mất điểm (giơ bảng, đội nhanh nhất +5).
+Đoán khóa bằng cách bấm chuông, mỗi đội chỉ được chờ một lần sau mỗi lần. Điểm thưởng tăng dần theo số hàng chưa mở khóa . Đoán sai thì trừ 10 điểm và mất quyền dự đoán ở 2 lượt xem tiếp theo. 
+Gợi ý (do MC bật khi cần): sau hàng 4 báo "từ khóa có 11 chữ, 3 từ"; sau hàng 8 hiện hình ảnh mũi ý (một ngọn đèn trên bờ biển, không kèm chữ, …).

@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <!-- Background sky gradient -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#050b1a" />
+      <stop offset="60%" stop-color="#0a1936" />
+      <stop offset="100%" stop-color="#142c54" />
+    </linearGradient>
+
+    <!-- Sea gradient -->
+    <linearGradient id="seaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0c234b" />
+      <stop offset="50%" stop-color="#061633" />
+      <stop offset="100%" stop-color="#020817" />
+    </linearGradient>
+
+    <!-- Light beam radial gradient -->
+    <linearGradient id="beamGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffeaa7" stop-opacity="0.9" />
+      <stop offset="30%" stop-color="#fdcb6e" stop-opacity="0.4" />
+      <stop offset="80%" stop-color="#f39c12" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#f39c12" stop-opacity="0" />
+    </linearGradient>
+
+    <radialGradient id="lampGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fffbe0" stop-opacity="1" />
+      <stop offset="30%" stop-color="#f9ca24" stop-opacity="0.8" />
+      <stop offset="70%" stop-color="#f0932b" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#eb4d4b" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Star filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Sky background -->
+  <rect width="800" height="420" fill="url(#skyGrad)" />
+
+  <!-- Stars -->
+  <g fill="#ffffff" opacity="0.8">
+    <circle cx="80" cy="70" r="1.5" />
+    <circle cx="150" cy="40" r="1.2" />
+    <circle cx="230" cy="95" r="2" />
+    <circle cx="310" cy="50" r="1.5" />
+    <circle cx="390" cy="110" r="1.8" />
+    <circle cx="480" cy="65" r="1.3" />
+    <circle cx="560" cy="45" r="2" />
+    <circle cx="670" cy="85" r="1.5" />
+    <circle cx="730" cy="55" r="1.8" />
+    <circle cx="120" cy="160" r="1.4" />
+    <circle cx="260" cy="180" r="1.6" />
+    <circle cx="620" cy="150" r="1.2" />
+    <circle cx="710" cy="170" r="2" />
+  </g>
+
+  <!-- Crescent Moon -->
+  <path d="M 680,60 A 35,35 0 1,0 725,115 A 42,42 0 1,1 680,60 Z" fill="#ffeaa7" filter="url(#glow)" opacity="0.9" />
+
+  <!-- Sea background -->
+  <rect y="400" width="800" height="200" fill="url(#seaGrad)" />
+
+  <!-- Water Reflection / Waves -->
+  <ellipse cx="400" cy="450" rx="360" ry="15" fill="#1b4985" opacity="0.4" />
+  <ellipse cx="400" cy="500" rx="380" ry="20" fill="#153664" opacity="0.5" />
+  <ellipse cx="400" cy="550" rx="400" ry="25" fill="#0d2342" opacity="0.6" />
+
+  <!-- Light Beams from Lighthouse -->
+  <!-- Left Beam -->
+  <polygon points="400,215 50,280 20,380" fill="url(#beamGrad)" opacity="0.65" />
+  <!-- Right Beam -->
+  <polygon points="400,215 750,260 790,360" fill="url(#beamGrad)" opacity="0.75" />
+
+  <!-- Island / Rock base -->
+  <path d="M 280,440 Q 400,380 520,440 L 560,470 Q 400,490 240,470 Z" fill="#1e272e" />
+  <path d="M 290,435 Q 400,385 510,435 L 530,450 Q 400,470 270,450 Z" fill="#2f3640" />
+
+  <!-- Lighthouse Structure -->
+  <!-- Base platform -->
+  <rect x="365" y="380" width="70" height="15" rx="3" fill="#353b48" />
+
+  <!-- Tower Body (Striped Red/White) -->
+  <!-- Section 1 (Base dark red) -->
+  <polygon points="370,380 430,380 425,340 375,340" fill="#c0392b" />
+  <!-- Section 2 (White) -->
+  <polygon points="375,340 425,340 420,300 380,300" fill="#ecf0f1" />
+  <rect x="395" y="315" width="10" height="15" rx="3" fill="#2c3e50" />
+  <!-- Section 3 (Red) -->
+  <polygon points="380,300 420,300 416,260 384,260" fill="#e74c3c" />
+  <!-- Section 4 (White) -->
+  <polygon points="384,260 416,260 412,230 388,230" fill="#f5f6fa" />
+  <rect x="396" y="240" width="8" height="12" rx="2" fill="#2c3e50" />
+
+  <!-- Balcony -->
+  <rect x="380" y="226" width="40" height="6" rx="2" fill="#2f3542" />
+  <line x1="382" y1="223" x2="418" y2="223" stroke="#747d8c" stroke-width="2" />
+  <line x1="384" y1="223" x2="384" y2="226" stroke="#747d8c" stroke-width="2" />
+  <line x1="392" y1="223" x2="392" y2="226" stroke="#747d8c" stroke-width="2" />
+  <line x1="400" y1="223" x2="400" y2="226" stroke="#747d8c" stroke-width="2" />
+  <line x1="408" y1="223" x2="408" y2="226" stroke="#747d8c" stroke-width="2" />
+  <line x1="416" y1="223" x2="416" y2="226" stroke="#747d8c" stroke-width="2" />
+
+  <!-- Lantern Room (Glass) -->
+  <rect x="388" y="208" width="24" height="18" fill="#ffeaa7" opacity="0.9" />
+  <rect x="388" y="208" width="24" height="18" stroke="#2f3542" stroke-width="2" fill="none" />
+  <line x1="396" y1="208" x2="396" y2="226" stroke="#2f3542" stroke-width="1.5" />
+  <line x1="404" y1="208" x2="404" y2="226" stroke="#2f3542" stroke-width="1.5" />
+
+  <!-- Lamp Glow Core -->
+  <circle cx="400" cy="217" r="28" fill="url(#lampGlow)" filter="url(#glow)" />
+  <circle cx="400" cy="217" r="6" fill="#ffffff" />
+
+  <!-- Lighthouse Roof / Dome -->
+  <path d="M 385,208 Q 400,185 415,208 Z" fill="#2c3e50" />
+  <line x1="400" y1="185" x2="400" y2="175" stroke="#f1c40f" stroke-width="3" stroke-linecap="round" />
+  <circle cx="400" cy="174" r="3" fill="#f1c40f" />
+
+  <!-- Golden Title Banner in Sea -->
+  <text x="400" y="550" font-family="'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="bold" fill="#f5cd79" text-anchor="middle" letter-spacing="4" filter="url(#glow)">
+    NGỌN HẢI ĐĂNG
+  </text>
+  <text x="400" y="580" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" fill="#a4b0be" text-anchor="middle" letter-spacing="2">
+    ÁNH SÁNG DẪN ĐƯỜNG TRUYỀN THỐNG HẢI HÀ
+  </text>
+</svg>

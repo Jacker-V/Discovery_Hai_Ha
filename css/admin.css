@@ -1,0 +1,333 @@
+/* Admin / Operator Dashboard Styles - Tối ưu cho bàn kỹ thuật & MC */
+
+.admin-body {
+  background-color: #030a16;
+  color: #f1f5f9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Admin Header */
+.admin-header {
+  background: #09172e;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow-sm);
+}
+
+.admin-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.admin-brand h1 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #fbbf24;
+}
+
+.admin-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Admin Main Layout: 3 Columns */
+.admin-layout {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 360px 1fr 340px;
+  gap: 16px;
+  padding: 16px;
+  overflow: hidden;
+  height: calc(100vh - 65px);
+}
+
+.admin-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+/* Custom Scrollbar */
+.admin-col::-webkit-scrollbar {
+  width: 6px;
+}
+.admin-col::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.3);
+  border-radius: 3px;
+}
+
+/* Column 1: Row Selector List */
+.rows-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.row-item {
+  background: rgba(13, 30, 59, 0.7);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  border-radius: 10px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.row-item:hover {
+  background: rgba(22, 48, 92, 0.8);
+  border-color: rgba(96, 165, 250, 0.5);
+}
+
+.row-item.active {
+  background: rgba(30, 64, 128, 0.9);
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.3);
+}
+
+.row-item.opened {
+  border-left: 4px solid var(--accent-green);
+}
+
+.row-item-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.row-num-badge {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.row-ans-preview {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+}
+
+.row-ans-preview .key-char {
+  color: var(--accent-gold);
+  text-decoration: underline;
+  font-weight: 900;
+}
+
+.row-item-actions {
+  display: flex;
+  gap: 6px;
+}
+
+/* Column 2: Center Controller */
+.active-question-card {
+  background: linear-gradient(145deg, #0f244a, #09172f);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.q-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.q-full-text {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.45;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 12px;
+  border-radius: 8px;
+  border-left: 3px solid var(--accent-gold);
+}
+
+.q-answer-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+  color: #94a3b8;
+}
+
+.q-answer-letters {
+  font-family: var(--font-mono);
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #38bdf8;
+  letter-spacing: 3px;
+}
+
+/* Timer Control Box */
+.timer-control-box {
+  background: rgba(11, 25, 50, 0.8);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  border-radius: 12px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.timer-digits {
+  font-family: var(--font-mono);
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--accent-gold);
+  min-width: 70px;
+}
+
+.timer-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+/* Fast Action Buttons Grid */
+.actions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* MC Prompter Box */
+.prompter-box {
+  background: rgba(8, 20, 42, 0.85);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.prompter-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+}
+
+.prompter-text {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 8px;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+/* Column 3: Teams & Score Controls */
+.teams-manager {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.team-admin-card {
+  background: rgba(13, 30, 59, 0.8);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  border-radius: 12px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.team-admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.team-admin-name {
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.team-admin-score {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #fbbf24;
+}
+
+.score-btn-group {
+  display: flex;
+  gap: 6px;
+}
+
+.score-btn-group .btn {
+  flex: 1;
+  padding: 6px 4px;
+  font-size: 0.85rem;
+}
+
+/* Buzzer Trigger Box */
+.buzzer-admin-box {
+  background: rgba(10, 23, 46, 0.9);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.buzzer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+/* Clue & Hints Controls */
+.hints-admin-box {
+  background: rgba(10, 23, 46, 0.9);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Sound Trigger Strip */
+.sound-effects-strip {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.sound-effects-strip .btn {
+  flex: 1;
+  min-width: 70px;
+  padding: 6px 10px;
+  font-size: 0.8rem;
+}

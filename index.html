@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khởi Động Trò Chơi Ô Chữ - SVCG Hải Hà XXVIII</title>
+  <link rel="stylesheet" href="css/common.css">
+  <style>
+    .hub-container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .hero-banner {
+      text-align: center;
+      padding: 40px 20px;
+      background: radial-gradient(circle at center, #0e2b5c 0%, #06152d 100%);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 20px;
+      box-shadow: var(--shadow-lg);
+      margin-bottom: 30px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-banner h1 {
+      font-size: 2.5rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      background: linear-gradient(90deg, #ffffff, #fde68a, #f59e0b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+    }
+
+    .hero-banner p {
+      font-size: 1.15rem;
+      color: #93c5fd;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .modes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .mode-card {
+      background: rgba(13, 30, 59, 0.85);
+      border: 1px solid rgba(59, 130, 246, 0.25);
+      border-radius: 16px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mode-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--accent-gold);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(245, 158, 11, 0.2);
+    }
+
+    .mode-icon {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+    }
+
+    .mode-card h2 {
+      font-size: 1.35rem;
+      color: #f8fafc;
+      margin-bottom: 10px;
+    }
+
+    .mode-card p {
+      font-size: 0.95rem;
+      color: #94a3b8;
+      line-height: 1.6;
+      margin-bottom: 24px;
+      flex: 1;
+    }
+
+    /* Guide Box */
+    .guide-box {
+      background: rgba(8, 20, 42, 0.8);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 16px;
+      padding: 24px 30px;
+    }
+
+    .guide-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 16px;
+    }
+
+    .guide-item {
+      background: rgba(0, 0, 0, 0.25);
+      padding: 16px;
+      border-radius: 10px;
+      border-left: 3px solid var(--accent-gold);
+    }
+
+    .guide-item h3 {
+      font-size: 1rem;
+      color: #fbbf24;
+      margin-bottom: 6px;
+    }
+
+    .guide-item p {
+      font-size: 0.88rem;
+      color: #cbd5e1;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="hub-container">
+    <!-- Hero Banner -->
+    <header class="hero-banner">
+      <div class="badge" style="background: rgba(245, 158, 11, 0.2); color: #fde68a; margin-bottom: 14px; border: 1px solid rgba(245, 158, 11, 0.4);">
+        LỄ TRUYỀN THỐNG XXVIII • SINH VIÊN CÔNG GIÁO HẢI HÀ
+      </div>
+      <h1>TRÒ CHƠI Ô CHỮ "GIẢI MÃ HẢI HÀ"</h1>
+      <p>"Đừng sợ, vì Ta ở với ngươi" (Is 41,10) • Hành trình 28 năm gắn kết và yêu thương</p>
+    </header>
+
+    <!-- Selection Grid -->
+    <section class="modes-grid">
+      <!-- Card 1: Stage View -->
+      <div class="mode-card">
+        <div>
+          <div class="mode-icon">🖥️</div>
+          <h2>Màn Hình Trình Chiếu (Stage View)</h2>
+          <p>
+            Dành riêng để chiếu lên <strong>máy chiếu hoặc màn hình LED hội trường</strong>. 
+            Hiển thị bảng 11 hàng ngang căn thẳng cột chữ khóa, hiệu ứng lật 3D Flip Card, đồng hồ 15s, và pháo hoa rực rỡ khi giải mã xong.
+          </p>
+        </div>
+        <a href="stage.html" target="_blank" class="btn btn-gold" style="width: 100%; font-size: 1.05rem;">
+          Mở Màn Chiếu Sân Khấu ↗
+        </a>
+      </div>
+
+      <!-- Card 2: Admin Controller -->
+      <div class="mode-card">
+        <div>
+          <div class="mode-icon">🎛️</div>
+          <h2>Bàn Điều Khiển (Admin / MC)</h2>
+          <p>
+            Dành cho <strong>MC hoặc kỹ thuật viên</strong> điều khiển trên laptop. 
+            Xem trước đáp án, điều khiển đồng hồ 15s, bấm chuông giành quyền 4 quận, cộng/trừ điểm và đọc kịch bản MC nhắc bài 20-30s.
+          </p>
+        </div>
+        <a href="admin.html" target="_blank" class="btn btn-primary" style="width: 100%; font-size: 1.05rem;">
+          Mở Bàn Điều Khiển ↗
+        </a>
+      </div>
+
+      <!-- Card 3: Split Screen Practice -->
+      <div class="mode-card">
+        <div>
+          <div class="mode-icon">👥</div>
+          <h2>Chế Độ Tập Dượt (Split-Screen)</h2>
+          <p>
+            Mở cả màn hình Điều khiển và Trình chiếu <strong>song song trên cùng 1 cửa sổ</strong>. 
+            Hoàn hảo để ban tổ chức tập dượt kịch bản, làm quen phím tắt và kiểm tra trước giờ bắt đầu.
+          </p>
+        </div>
+        <a href="split.html" class="btn btn-secondary" style="width: 100%; font-size: 1.05rem;">
+          Tập Dượt Song Song
+        </a>
+      </div>
+    </section>
+
+    <!-- Operations Guide -->
+    <section class="guide-box">
+      <h2 style="font-size: 1.25rem; color: #93c5fd; display: flex; align-items: center; gap: 10px;">
+        <span>📋</span> HƯỚNG DẪN VẬN HÀNH TRONG CHƯƠNG TRÌNH GIAO LƯU
+      </h2>
+
+      <div class="guide-grid">
+        <div class="guide-item">
+          <h3>1. Kết nối 2 màn hình (Extend Display)</h3>
+          <p>Cắm dây HDMI vào máy chiếu, nhấn tổ hợp phím <strong>Windows + P</strong> chọn <strong>Extend</strong>. Kéo cửa sổ <code>stage.html</code> sang máy chiếu và nhấn phím <strong>F</strong> (hoặc F11) để phóng to toàn màn hình.</p>
+        </div>
+
+        <div class="guide-item">
+          <h3>2. Phím tắt thao tác nhanh</h3>
+          <p>
+            • Phím <strong>1, 2, 3, 4</strong>: Kích hoạt chuông bấm lần lượt cho Cầu Giấy, Hoàng Mai, Thanh Xuân, Đống Đa.<br>
+            • Phím <strong>Space (Dấu cách)</strong>: Bắt đầu hoặc Tạm dừng đếm ngược 15 giây.<br>
+            • Phím <strong>F</strong>: Bật/tắt toàn màn hình trên Stage.
+          </p>
+        </div>
+
+        <div class="guide-item">
+          <h3>3. Cơ chế đồng bộ Offline 100%</h3>
+          <p>Hai màn hình tự động giao tiếp tức thì thông qua bộ nhớ trình duyệt (BroadcastChannel), <strong>hoàn toàn không cần Internet hay Wi-Fi</strong>. Điểm số tự động lưu vào máy, reload không bị mất.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

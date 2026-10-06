@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bàn Điều Khiển - Ô Chữ "Giải Mã Hải Hà"</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+  <!-- Top Navigation Bar -->
+  <header class="admin-header">
+    <div class="admin-brand">
+      <span class="badge" style="background: #d97706; color: #fff;">OPERATOR & MC</span>
+      <h1>ĐIỀU KHIỂN: Ô CHỮ HẢI HÀ XXVIII</h1>
+    </div>
+
+    <div class="admin-header-actions">
+      <button class="btn btn-secondary" id="btn-mute-toggle">🔊 Tắt Âm</button>
+      <button class="btn btn-secondary" id="btn-align-toggle">Cột: Thẳng hàng</button>
+      <button class="btn btn-primary" id="btn-open-stage">🖥️ Mở Màn Chiếu (Stage)</button>
+      <button class="btn btn-danger" id="btn-reset-game">⚠️ Reset Game</button>
+    </div>
+  </header>
+
+  <!-- 3-Column Dashboard Layout -->
+  <main class="admin-layout">
+    <!-- CỘT 1: Danh sách 11 hàng ngang -->
+    <section class="admin-col">
+      <div style="display: flex; align-items: center; justify-content: space-between;">
+        <h2 style="font-size: 1rem; font-weight: 700; color: #93c5fd;">DANH SÁCH 11 HÀNG NGANG</h2>
+        <span class="badge" style="background: rgba(59, 130, 246, 0.2);">CHỌN ĐỂ HỎI</span>
+      </div>
+
+      <div class="rows-list" id="admin-rows-list">
+        <!-- Render động 11 hàng ngang -->
+      </div>
+    </section>
+
+    <!-- CỘT 2: Bàn điều khiển trung tâm -->
+    <section class="admin-col">
+      <!-- Thẻ câu hỏi đang chọn -->
+      <div class="active-question-card">
+        <div class="q-meta">
+          <span class="badge" id="admin-q-badge" style="background: #2563eb; color: #fff;">HÀNG 1</span>
+          <span id="admin-q-source" style="font-size: 0.8rem; color: #94a3b8;">Nguồn: Lịch sử hình thành nhóm</span>
+        </div>
+
+        <div class="q-full-text" id="admin-q-text">
+          Vui lòng chọn 1 hàng ngang trong danh sách bên trái để bắt đầu.
+        </div>
+
+        <div class="q-answer-box">
+          <span>ĐÁP ÁN:</span>
+          <span class="q-answer-letters" id="admin-q-letters">—</span>
+        </div>
+      </div>
+
+      <!-- Khối Bấm Giờ 15s -->
+      <div class="timer-control-box">
+        <div>
+          <div style="font-size: 0.75rem; color: #94a3b8; font-weight: 700;">ĐỒNG HỒ 15 GIÂY</div>
+          <div class="timer-digits" id="admin-timer-digits">15</div>
+        </div>
+
+        <div class="timer-buttons">
+          <button class="btn btn-success" id="btn-timer-start">▶ Bắt Đầu (Space)</button>
+          <button class="btn btn-secondary" id="btn-timer-pause">⏸ Tạm Dừng</button>
+          <button class="btn btn-secondary" id="btn-timer-reset">↺ Đặt Lại</button>
+        </div>
+      </div>
+
+      <!-- Thao tác Lật Đáp Án Nhanh -->
+      <div class="actions-grid">
+        <button class="btn btn-gold" id="btn-reveal-current" style="padding: 14px; font-size: 1rem;">
+          ✨ LẬT HÀNG ĐANG CHỌN
+        </button>
+        <button class="btn btn-primary" id="btn-reveal-vertical" style="padding: 14px; font-size: 1rem; background: linear-gradient(135deg, #b45309, #f59e0b);">
+          ⭐ GIẢI MÃ "NGỌN HẢI ĐĂNG"
+        </button>
+      </div>
+
+      <!-- Khối Lời Dẫn MC (Prompter 20-30s) -->
+      <div class="prompter-box">
+        <div class="prompter-header">
+          <span>🎙️ LỜI BÌNH MC SAU KHI MỞ ĐÁP ÁN (20–30s)</span>
+          <div style="display: flex; gap: 6px;">
+            <button class="btn btn-secondary" id="btn-show-story-stage" style="padding: 3px 8px; font-size: 0.7rem;">Chiếu Lên Stage</button>
+            <button class="btn btn-secondary" id="btn-close-story-stage" style="padding: 3px 8px; font-size: 0.7rem;">Ẩn Khỏi Stage</button>
+          </div>
+        </div>
+        <div class="prompter-text" id="admin-prompter-text">
+          Chọn một câu hỏi để xem trước lời dẫn kịch bản cho MC...
+        </div>
+      </div>
+
+      <!-- Thanh âm thanh thủ công & Lật toàn bộ -->
+      <div style="background: rgba(10, 23, 46, 0.7); padding: 10px; border-radius: 10px; border: 1px solid rgba(59, 130, 246, 0.2);">
+        <div style="font-size: 0.75rem; color: #94a3b8; margin-bottom: 6px; font-weight: 700;">ÂM THANH HIỆU ỨNG SÂN KHẤU</div>
+        <div class="sound-effects-strip">
+          <button class="btn btn-success" id="btn-snd-correct">🔔 Đúng</button>
+          <button class="btn btn-danger" id="btn-snd-wrong">✖ Sai</button>
+          <button class="btn btn-primary" id="btn-snd-buzzer">⚡ Chuông</button>
+          <button class="btn btn-gold" id="btn-snd-victory">🏆 Vinh Quang</button>
+          <button class="btn btn-secondary" id="btn-reveal-all" style="font-size: 0.75rem;">Lật Toàn Bộ 11 Hàng</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CỘT 3: Quản lý Điểm 4 Quận & Gợi Ý -->
+    <section class="admin-col">
+      <!-- Bảng điểm 4 Quận -->
+      <div>
+        <h2 style="font-size: 1rem; font-weight: 700; color: #93c5fd; margin-bottom: 8px;">ĐIỂM SỐ 4 QUẬN</h2>
+        <div class="teams-manager" id="admin-teams-container">
+          <!-- Render động 4 đội -->
+        </div>
+      </div>
+
+      <!-- Quản lý Chuông Bấm -->
+      <div class="buzzer-admin-box">
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <span style="font-size: 0.85rem; font-weight: 700; color: #fbbf24;">CHUÔNG BẤM GIÀNH QUYỀN (1 - 4)</span>
+          <button class="btn btn-secondary" id="btn-reset-buzzer" style="padding: 4px 8px; font-size: 0.75rem;">Mở Chuông</button>
+        </div>
+        <div class="buzzer-grid">
+          <button class="btn btn-primary" style="background:#2563eb;" onclick="triggerBuzzer('cau-giay')">1: Cầu Giấy</button>
+          <button class="btn btn-primary" style="background:#dc2626;" onclick="triggerBuzzer('hoang-mai')">2: Hoàng Mai</button>
+          <button class="btn btn-primary" style="background:#059669;" onclick="triggerBuzzer('thanh-xuan')">3: Thanh Xuân</button>
+          <button class="btn btn-primary" style="background:#d97706;" onclick="triggerBuzzer('dong-da')">4: Đống Đa</button>
+        </div>
+      </div>
+
+      <!-- Kích Hoạt Gợi Ý -->
+      <div class="hints-admin-box">
+        <div style="font-size: 0.85rem; font-weight: 700; color: #fbbf24;">GỢI Ý TỪ KHÓA DỌC</div>
+        <div style="display: flex; gap: 6px;">
+          <button class="btn btn-secondary" id="btn-hint-1" style="flex: 1; font-size: 0.8rem;">Gợi Ý 1 (Sau hàng 4)</button>
+          <button class="btn btn-gold" id="btn-hint-2" style="flex: 1; font-size: 0.8rem;">Gợi Ý 2 (Ảnh Hải Đăng)</button>
+        </div>
+        <button class="btn btn-secondary" id="btn-close-hint" style="font-size: 0.8rem; margin-top: 4px;">Ẩn Gợi Ý Khỏi Màn Hình</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/sync.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

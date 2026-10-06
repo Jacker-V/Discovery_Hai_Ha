@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ô Chữ "Giải Mã Hải Hà" - Màn Hình Trình Chiếu</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/stage.css">
+</head>
+<body class="stage-body">
+  <!-- Background Glow -->
+  <div class="stage-ambient"></div>
+
+  <!-- Header -->
+  <header class="stage-header">
+    <div class="stage-brand">
+      <div class="stage-logo-icon">HH</div>
+      <div class="stage-title">
+        <h1>GIẢI MÃ HẢI HÀ</h1>
+        <p>Lễ Truyền Thống XXVIII • "Đừng sợ, vì Ta ở với ngươi" (Is 41,10)</p>
+      </div>
+    </div>
+    <div class="stage-header-right">
+      <div class="badge" style="background: rgba(245, 158, 11, 0.2); color: #fde68a; border: 1px solid rgba(245, 158, 11, 0.4);">
+        28 NĂM YÊU THƯƠNG
+      </div>
+      <div class="badge" style="background: rgba(59, 130, 246, 0.2); color: #93c5fd; border: 1px solid rgba(59, 130, 246, 0.4);">
+        F: TOÀN MÀN HÌNH
+      </div>
+    </div>
+  </header>
+
+  <!-- Question Banner -->
+  <div class="question-container" id="question-container">
+    <div class="q-badge" id="q-badge">CHỜ MC</div>
+    <div class="q-text" id="q-text">Chào mừng bạn đến với Ô Chữ "Giải Mã Hải Hà" - LTT XXVIII</div>
+    <div class="q-source" id="q-source">Hãy chọn một hàng ngang để bắt đầu...</div>
+  </div>
+
+  <!-- Main: Crossword Board -->
+  <main class="stage-main">
+    <div class="crossword-board" id="crossword-board">
+      <!-- Cột dọc ánh sáng hào quang cho chữ khóa -->
+      <div class="vertical-beacon-line" id="vertical-beacon"></div>
+      <!-- Các hàng ngang sẽ được tạo động bởi stage.js -->
+    </div>
+
+    <!-- Banner nổi bật từ khóa giải mã -->
+    <div class="vertical-keyword-banner" id="vertical-banner"></div>
+  </main>
+
+  <!-- Footer & Leaderboard -->
+  <footer class="stage-footer">
+    <!-- Đồng hồ đếm ngược -->
+    <div class="timer-widget">
+      <div class="timer-circle" id="timer-circle">15</div>
+      <div>
+        <div style="font-size: 0.75rem; color: #94a3b8; font-weight: 700;">THỜI GIAN</div>
+        <div style="font-size: 0.95rem; font-weight: 800; color: #f8fafc;">SUY NGHĨ</div>
+      </div>
+    </div>
+
+    <!-- Bảng điểm 4 quận -->
+    <div class="teams-bar" id="teams-bar">
+      <!-- Đội Cầu Giấy, Hoàng Mai, Thanh Xuân, Đống Đa sẽ render tại đây -->
+    </div>
+  </footer>
+
+  <!-- Popup Chuông Bấm Khẩn Cấp -->
+  <div class="buzzer-alert-overlay" id="buzzer-overlay">
+    <div style="font-size: 2rem;">⚡</div>
+    <div class="buzzer-alert-text" id="buzzer-text">CẦU GIẤY GIÀNH QUYỀN!</div>
+  </div>
+
+  <!-- Modal Gợi Ý (Hint Modal) -->
+  <div class="modal-overlay" id="hint-modal">
+    <div class="modal-content">
+      <h2 id="hint-title" style="color: #fbbf24; margin-bottom: 16px; font-size: 1.6rem;">GỢI Ý TỪ KHÓA</h2>
+      <div id="hint-body"></div>
+    </div>
+  </div>
+
+  <!-- Modal Góc Nhìn Lịch Sử (Story Modal) -->
+  <div class="modal-overlay" id="story-modal">
+    <div class="modal-content" style="max-width: 750px;">
+      <h2 id="story-title" style="color: #fbbf24; margin-bottom: 16px; font-size: 1.5rem;">GÓC NHÌN LỊCH SỬ</h2>
+      <div id="story-body"></div>
+    </div>
+  </div>
+
+  <!-- Canvas Pháo Hoa Chiến Thắng -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/sync.js"></script>
+  <script src="js/stage.js"></script>
+</body>
+</html>
