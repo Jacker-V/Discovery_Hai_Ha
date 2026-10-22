@@ -126,6 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
       sync.sendMessage({ type: "PLAY_SOUND", sound: "correct" });
     }
     sync.saveState(state);
+    updateActiveQuestion();
     renderRowsList();
   };
 
@@ -147,8 +148,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const row = window.GAME_DATA.rows.find(r => r.id === state.selectedRow);
 
     if (row) {
+      const isOpened = state.openedRows.includes(row.id);
       qMetaBadge.textContent = `HÀNG ${row.id} • ${row.length} KÝ TỰ`;
-      qMetaSource.textContent = `Nguồn: ${row.source}`;
+      qMetaSource.textContent = `Nguồn: ${row.source} ${isOpened ? "(✓ Đang hiện trên Stage)" : "(🔒 Ẩn trên Stage, mở đáp án mới hiện)"}`;
       qFullText.textContent = row.question;
 
       // Đáp án có highlight chữ khóa

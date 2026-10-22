@@ -116,12 +116,5 @@
   <path d="M 385,208 Q 400,185 415,208 Z" fill="#2c3e50" />
   <line x1="400" y1="185" x2="400" y2="175" stroke="#f1c40f" stroke-width="3" stroke-linecap="round" />
   <circle cx="400" cy="174" r="3" fill="#f1c40f" />
-
-  <!-- Golden Title Banner in Sea -->
-  <text x="400" y="550" font-family="'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="bold" fill="#f5cd79" text-anchor="middle" letter-spacing="4" filter="url(#glow)">
-    NGỌN HẢI ĐĂNG
-  </text>
-  <text x="400" y="580" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" fill="#a4b0be" text-anchor="middle" letter-spacing="2">
-    ÁNH SÁNG DẪN ĐƯỜNG TRUYỀN THỐNG HẢI HÀ
-  </text>
 </svg>
+

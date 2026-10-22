@@ -104,13 +104,23 @@ document.addEventListener("DOMContentLoaded", () => {
       if (rowData) {
         qBadge.textContent = `HÀNG ${rowData.id} (${rowData.length} CHỮ)`;
         qText.textContent = rowData.question;
-        qSource.textContent = `Nguồn: ${rowData.source}`;
+
+        // CHỈ HIỆN NGUỒN KHI ĐÁP ÁN CỦA HÀNG ĐÃ ĐƯỢC MỞ
+        const isRowOpened = state.openedRows.includes(rowData.id);
+        if (isRowOpened) {
+          qSource.textContent = `Nguồn: ${rowData.source}`;
+          qSource.style.display = "inline-block";
+        } else {
+          qSource.textContent = "";
+          qSource.style.display = "none";
+        }
         qContainer.classList.add("has-question");
       }
     } else {
       qBadge.textContent = "CHỜ MC";
       qText.textContent = "Chào mừng bạn đến với Ô Chữ 'Giải Mã Hải Hà' - LTT XXVIII";
-      qSource.textContent = "Hãy chọn một hàng ngang để bắt đầu...";
+      qSource.textContent = "";
+      qSource.style.display = "none";
       qContainer.classList.remove("has-question");
     }
 
@@ -182,7 +192,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 5. Cập nhật Chuông bấm nổi bật
     if (state.activeBuzzer) {
-      buzzerOverlay.style.background = `linear-gradient(135deg, ${state.activeBuzzer.color}, #1e293b)`;
+      buzzerOverlay.style.background = `linear-gradient(135deg, ${state.activeBuzzer.color}, #0284c7)`;
       buzzerText.textContent = `🔔 ${state.activeBuzzer.teamName.toUpperCase()} GIÀNH QUYỀN!`;
       buzzerOverlay.classList.add("active");
     } else {
@@ -194,11 +204,13 @@ document.addEventListener("DOMContentLoaded", () => {
       hintTitle.textContent = state.activeHint.title;
       if (state.activeHint.type === "image") {
         hintBody.innerHTML = `
-          <div style="font-size: 1.15rem; margin-bottom: 12px; color: #fde68a;">${state.activeHint.content}</div>
-          <img src="${state.activeHint.imageUrl}" alt="Gợi ý" style="max-height: 280px; width: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.5);">
+          ${state.activeHint.content ? `<div style="font-size: 1.15rem; margin-bottom: 12px; color: #0369a1; font-weight: 700;">${state.activeHint.content}</div>` : ""}
+          <div style="display: flex; justify-content: center; align-items: center; padding: 6px;">
+            <img src="${state.activeHint.imageUrl}" alt="Gợi ý hình ảnh" style="max-height: 400px; max-width: 95%; width: auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(2, 132, 199, 0.3); border: 3px solid rgba(255,255,255,0.95);">
+          </div>
         `;
       } else {
-        hintBody.innerHTML = `<p style="font-size: 1.4rem; color: #fff; font-weight: 700;">${state.activeHint.content}</p>`;
+        hintBody.innerHTML = `<p style="font-size: 1.45rem; color: #0f172a; font-weight: 800; line-height: 1.5;">${state.activeHint.content}</p>`;
       }
       hintModal.classList.add("active");
     } else {
@@ -208,7 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // 7. Cập nhật Câu chuyện MC (Story)
     if (state.activeStory) {
       storyTitle.textContent = `📖 GÓC NHÌN LỊCH SỬ • ĐÁP ÁN: ${state.activeStory.answer}`;
-      storyBody.innerHTML = `<p style="font-size: 1.25rem; line-height: 1.6; color: #f1f5f9;">${state.activeStory.content}</p>`;
+      storyBody.innerHTML = `<p style="font-size: 1.25rem; line-height: 1.6; color: #0f172a; font-weight: 600;">${state.activeStory.content}</p>`;
       storyModal.classList.add("active");
     } else {
       storyModal.classList.remove("active");

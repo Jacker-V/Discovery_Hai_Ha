@@ -24,7 +24,7 @@ const GAME_DATA = {
         afterRow: 8,
         type: "image",
         title: "Gợi ý 2 (Sau hàng thứ 8)",
-        content: "Hình ảnh biểu trưng dẫn lối giữa biển đêm...",
+        content: "",
         imageUrl: "assets/images/lighthouse.svg"
       }
     ]
@@ -56,9 +56,9 @@ const GAME_DATA = {
       keyIndex: 4, // G-I-A-N-[G]-V-O (0-indexed: index 4)
       answer: "GIANGVO",
       length: 7,
-      question: "Cuộc thi Tiếng Hát Ca lần thứ I (thời anh Đỗ Công Sơn, 2010–2012) diễn ra tại địa điểm nào?",
+      question: "Cuộc thi Tiếng Hát Thánh Ca lần thứ I (thời anh Đỗ Công Sơn, 2010–2012) diễn ra tại địa điểm nào?",
       source: "Lịch sử hình thành nhóm",
-      mcStory: "Cuộc thi Tiếng Hát Ca tại Giảng Võ ghi dấu thời anh Đỗ Công Sơn, cũng là cái nôi hình thành và phát triển của đoàn Gabriel."
+      mcStory: "Cuộc thi Tiếng Hát Thánh Ca tại Giảng Võ ghi dấu thời anh Đỗ Công Sơn, cũng là cái nôi hình thành và phát triển của đoàn Gabriel."
     },
     {
       id: 3,

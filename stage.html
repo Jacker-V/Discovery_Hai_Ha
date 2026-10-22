@@ -8,23 +8,39 @@
   <link rel="stylesheet" href="css/stage.css">
 </head>
 <body class="stage-body">
-  <!-- Background Glow -->
-  <div class="stage-ambient"></div>
+  <!-- Bright Sun Rays & Water Ambient Glow -->
+  <div class="stage-ambient">
+    <div class="sun-shimmer"></div>
+    <div class="water-caustics"></div>
+  </div>
+
+  <!-- Animated Ocean Waves at Bottom -->
+  <div class="ocean-waves-container">
+    <svg class="ocean-wave wave-back" viewBox="0 0 1440 280" preserveAspectRatio="none">
+      <path fill="rgba(56, 189, 248, 0.45)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,133.3C672,139,768,181,864,186.7C960,192,1056,160,1152,144C1248,128,1344,128,1392,128L1440,128L1440,280L1392,280C1344,280,1248,280,1152,280C1056,280,960,280,864,280C768,280,672,280,576,280C480,280,384,280,288,280C192,280,96,280,48,280L0,280Z"></path>
+    </svg>
+    <svg class="ocean-wave wave-mid" viewBox="0 0 1440 280" preserveAspectRatio="none">
+      <path fill="rgba(14, 165, 233, 0.6)" d="M0,160L48,149.3C96,139,192,117,288,128C384,139,480,181,576,186.7C672,192,768,160,864,144C960,128,1056,128,1152,144C1248,160,1344,192,1392,208L1440,224L1440,280L1392,280C1344,280,1248,280,1152,280C1056,280,960,280,864,280C768,280,672,280,576,280C480,280,384,280,288,280C192,280,96,280,48,280L0,280Z"></path>
+    </svg>
+    <svg class="ocean-wave wave-front" viewBox="0 0 1440 280" preserveAspectRatio="none">
+      <path fill="rgba(2, 132, 199, 0.82)" d="M0,64L48,80C96,96,192,128,288,149.3C384,171,480,181,576,165.3C672,149,768,107,864,106.7C960,107,1056,149,1152,165.3C1248,181,1344,171,1392,165.3L1440,160L1440,280L1392,280C1344,280,1248,280,1152,280C1056,280,960,280,864,280C768,280,672,280,576,280C480,280,384,280,288,280C192,280,96,280,48,280L0,280Z"></path>
+    </svg>
+  </div>
 
   <!-- Header -->
   <header class="stage-header">
     <div class="stage-brand">
-      <div class="stage-logo-icon">HH</div>
+      <div class="stage-logo-icon">🌊</div>
       <div class="stage-title">
         <h1>GIẢI MÃ HẢI HÀ</h1>
         <p>Lễ Truyền Thống XXVIII • "Đừng sợ, vì Ta ở với ngươi" (Is 41,10)</p>
       </div>
     </div>
     <div class="stage-header-right">
-      <div class="badge" style="background: rgba(245, 158, 11, 0.2); color: #fde68a; border: 1px solid rgba(245, 158, 11, 0.4);">
-        28 NĂM YÊU THƯƠNG
+      <div class="badge badge-fest">
+        ⚓ 28 NĂM YÊU THƯƠNG
       </div>
-      <div class="badge" style="background: rgba(59, 130, 246, 0.2); color: #93c5fd; border: 1px solid rgba(59, 130, 246, 0.4);">
+      <div class="badge badge-screen">
         F: TOÀN MÀN HÌNH
       </div>
     </div>
@@ -34,15 +50,17 @@
   <div class="question-container" id="question-container">
     <div class="q-badge" id="q-badge">CHỜ MC</div>
     <div class="q-text" id="q-text">Chào mừng bạn đến với Ô Chữ "Giải Mã Hải Hà" - LTT XXVIII</div>
-    <div class="q-source" id="q-source">Hãy chọn một hàng ngang để bắt đầu...</div>
+    <div class="q-source" id="q-source" style="display: none;"></div>
   </div>
 
   <!-- Main: Crossword Board -->
   <main class="stage-main">
-    <div class="crossword-board" id="crossword-board">
-      <!-- Cột dọc ánh sáng hào quang cho chữ khóa -->
-      <div class="vertical-beacon-line" id="vertical-beacon"></div>
-      <!-- Các hàng ngang sẽ được tạo động bởi stage.js -->
+    <div class="crossword-board-wrapper">
+      <div class="crossword-board" id="crossword-board">
+        <!-- Cột dọc ánh sáng hào quang cho chữ khóa -->
+        <div class="vertical-beacon-line" id="vertical-beacon"></div>
+        <!-- Các hàng ngang sẽ được tạo động bởi stage.js -->
+      </div>
     </div>
 
     <!-- Banner nổi bật từ khóa giải mã -->
@@ -55,8 +73,8 @@
     <div class="timer-widget">
       <div class="timer-circle" id="timer-circle">15</div>
       <div>
-        <div style="font-size: 0.75rem; color: #94a3b8; font-weight: 700;">THỜI GIAN</div>
-        <div style="font-size: 0.95rem; font-weight: 800; color: #f8fafc;">SUY NGHĨ</div>
+        <div style="font-size: 0.75rem; color: #0369a1; font-weight: 800; letter-spacing: 0.5px;">THỜI GIAN</div>
+        <div style="font-size: 0.95rem; font-weight: 900; color: #0c4a6e;">SUY NGHĨ</div>
       </div>
     </div>
 
@@ -68,14 +86,14 @@
 
   <!-- Popup Chuông Bấm Khẩn Cấp -->
   <div class="buzzer-alert-overlay" id="buzzer-overlay">
-    <div style="font-size: 2rem;">⚡</div>
+    <div style="font-size: 2.2rem;">⚡</div>
     <div class="buzzer-alert-text" id="buzzer-text">CẦU GIẤY GIÀNH QUYỀN!</div>
   </div>
 
   <!-- Modal Gợi Ý (Hint Modal) -->
   <div class="modal-overlay" id="hint-modal">
     <div class="modal-content">
-      <h2 id="hint-title" style="color: #fbbf24; margin-bottom: 16px; font-size: 1.6rem;">GỢI Ý TỪ KHÓA</h2>
+      <h2 id="hint-title" style="color: #d97706; margin-bottom: 16px; font-size: 1.6rem; font-weight: 900; letter-spacing: 1px;">GỢI Ý TỪ KHÓA</h2>
       <div id="hint-body"></div>
     </div>
   </div>
@@ -83,7 +101,7 @@
   <!-- Modal Góc Nhìn Lịch Sử (Story Modal) -->
   <div class="modal-overlay" id="story-modal">
     <div class="modal-content" style="max-width: 750px;">
-      <h2 id="story-title" style="color: #fbbf24; margin-bottom: 16px; font-size: 1.5rem;">GÓC NHÌN LỊCH SỬ</h2>
+      <h2 id="story-title" style="color: #0284c7; margin-bottom: 16px; font-size: 1.5rem; font-weight: 800;">GÓC NHÌN LỊCH SỬ</h2>
       <div id="story-body"></div>
     </div>
   </div>
